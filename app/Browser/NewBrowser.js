@@ -1,9 +1,6 @@
 import React from 'react';
 import {View,Text, StyleSheet, Dimensions,TouchableOpacity,PixelRatio,Image,ImageBackground} from 'react-native';
 import bgImage from '../../images/SimpleBackground.jpg';
-import SSH from 'react-native-ssh';
-import SSHBis from 'react-native-sshclient';
-import SSHClient from 'react-native-ssh-sftp';
 
 const parseString = require('react-native-xml2js').parseString;
 const parseFromString = require('react-native-xml2js').parseFromString;
@@ -46,7 +43,7 @@ export default class Browser extends React.Component {
         );
       }
 
-      sendRequest2(){
+      sendRequest(){
         //------------Get the token------------------------
 
         //this.getToken;
@@ -76,7 +73,7 @@ export default class Browser extends React.Component {
       // Possible to make multiple lines with an \ at the end
       var xml = ('<?xml version="1.0" ?>\
       <alarm>\
-        <name>Test Alarm 1</name>\
+        <name>Test Fake 1</name>\
         <beamy_id>1</beamy_id>\
         <time>\
           <day>wednesday</day>\
@@ -102,42 +99,6 @@ export default class Browser extends React.Component {
     .catch((error) =>{
       console.error(error);
     });
-
-  }
-
-  sendRequest() {
-    console.log("SSH Message");
-    // config = {user: 'pi', host: '10.237.104.67', password: 'raspberry'};
-    // command = 'ls ~';
-    //
-    // SSH.execute(config, command).then(
-    //   result => console.log(result),
-    //   error =>  console.log('Error:', error)
-    // );
-
-    // const config = {
-    //   host: '10.237.104.67',
-    //   user: 'pi',
-    //   password: 'raspberry'
-    // };
-    // const command = 'ls -al';
-    //
-    // SSHBis.Execute(config, command)
-    // .then(response => console.log(response));
-
-    let client = new SSHClient('10.0.0.10', 22, 'user', 'password', (error) => {
-      if (error)
-        console.warn(error);
-    });
-
-    var command = 'ls -l';
-    client.execute(command, (error, output) => {
-    if (error)
-      console.warn(error);
-    if (output)
-      console.warn(output);
-    });
-
 
   }
 

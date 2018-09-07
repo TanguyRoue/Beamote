@@ -23,9 +23,6 @@
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "react-native-router-flux": "^4.0.1",
-    "react-native-ssh": "^1.0.1",
-    "react-native-ssh-sftp": "^1.0.3",
-    "react-native-sshclient": "^1.0.4",
     "react-native-xml2js": "^1.0.3",
     "react-xml-parser": "^1.0.7"
   }
