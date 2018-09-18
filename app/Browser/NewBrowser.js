@@ -85,6 +85,22 @@ export default class Browser extends React.Component {
       </alarm>\
       ');
 
+      let xmlPatch = ('<?xml version="1.0" ?>\
+      <alarm>\
+        <name>Test Fake 1</name>\
+        <beamy_id>1</beamy_id>\
+        <time>\
+          <day>wednesday</day>\
+          <hour>9</hour>\
+          <minute>56</minute>\
+        </time>\
+        <enabled>true</enabled>\
+        <ringtone>3</ringtone>\
+      </alarm>\
+      ');
+
+
+
       console.log('xml : '+xml);
       console.log(JSON.stringify(xml));
 
@@ -99,6 +115,11 @@ export default class Browser extends React.Component {
     .catch((error) =>{
       console.error(error);
     });
+
+    fetch(url, {
+      method: 'PATCH',
+      body: xmlPatch,
+    })
 
   }
 
