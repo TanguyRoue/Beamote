@@ -85,19 +85,20 @@ export default class Browser extends React.Component {
       </alarm>\
       ');
 
-      let xmlPatch = ('<?xml version="1.0" ?>\
-      <alarm>\
-        <name>Test Fake 1</name>\
-        <beamy_id>1</beamy_id>\
-        <time>\
-          <day>wednesday</day>\
-          <hour>9</hour>\
-          <minute>56</minute>\
-        </time>\
-        <enabled>true</enabled>\
-        <ringtone>3</ringtone>\
-      </alarm>\
-      ');
+      // let xmlPatch = ('<?xml version="1.0" ?>\
+      // <alarm>\
+      //   <name>Test Update 1</name>\
+      //   <alarm_id>1</alarm_id>
+      //   <beamy_id>1</beamy_id>\
+      //   <time>\
+      //     <day>wednesday</day>\
+      //     <hour>10</hour>\
+      //     <minute>10</minute>\
+      //   </time>\
+      //   <enabled>true</enabled>\
+      //   <ringtone>3</ringtone>\
+      // </alarm>\
+      // ');
 
 
 
@@ -116,11 +117,11 @@ export default class Browser extends React.Component {
       console.error(error);
     });
 
-    fetch(url, {
-      method: 'PATCH',
-      body: xmlPatch,
-    })
-
+  //   fetch(url, {
+  //     method: 'PATCH',
+  //     body: xmlPatch,
+  //   })
+  //
   }
 
   async getToken() {
