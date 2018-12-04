@@ -10,7 +10,7 @@ import { Router, Scene, Actions, ActionConst } from 'react-native-router-flux';
 
 export default class App extends React.Component {
   render() {
-    //testXSF
+    //testXSF 2
     //return <Browser/>;
     return (
 	    <Router>
